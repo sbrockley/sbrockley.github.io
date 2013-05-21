@@ -274,6 +274,14 @@ module.exports = function (grunt) {
                     src: [
                         'generated/*'
                     ]
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/bower_components/jquery-galleria/src/themes/classic',
+                    dest: '<%= yeoman.dist %>/scripts/vendor/theme',
+                    src: [
+                        '*'
+                    ]
                 }]
             }
         },
