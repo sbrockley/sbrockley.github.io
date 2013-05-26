@@ -1,6 +1,6 @@
 #Welcome.
 
-This is a photography-oriented website using [jQuery Galleria](galleria.io).
+This is a photography-oriented website using [jQuery Galleria](http://galleria.io).
 
 #Getting started.
 
