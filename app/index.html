@@ -18,8 +18,8 @@
 
         <!-- style the gallery -->
         <style type="text/css">
-            #galleria{ width: 700px; height: 400px; background: #ffffff }
-            .galleria-container{ background: #fff }
+            #galleria{ width: 700px; height: 400px; }
+            .galleria-container{}
         </style>
 
     </head>
@@ -28,9 +28,6 @@
             <div class="hero-unit">
 
                 <div id="galleria">
-                    <img src="images/photo1.png">
-                    <img src="images/photo2.png">
-                    <img src="images/photo3.png">
                 </div>
 
             </div>
@@ -54,6 +51,7 @@
 
         <!-- build:js scripts/vendor/galleria.js -->
         <script src="bower_components/jquery-galleria/src/galleria.js"></script>
+        <script src="bower_components/jquery-galleria/src/plugins/picasa/galleria.picasa.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/vendor/theme/galleria.classic.min.js -->
@@ -61,7 +59,12 @@
         <script>
             //Galleria.loadTheme('scripts/vendor/theme/galleria.classic.min.js');
             Galleria.loadTheme('bower_components/jquery-galleria/src/themes/classic/galleria.classic.js');
-            Galleria.run('#galleria');
+            Galleria.run('#galleria', {
+                picasa: 'useralbum:116822487665710086731/5215542302391162465',
+                picasaOptions: {
+                    sort: 'date-posted-asc'
+                }
+            });
         </script>
         <!-- endbuild -->
 
