@@ -24,14 +24,29 @@
 
     </head>
     <body>
-        <div class="container">
-            <div class="hero-unit">
 
-                <div id="galleria">
-                </div>
+        <!-- build:js scripts/main.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <!-- endbuild -->
 
-            </div>
-        </div>
+        <script type="text/javascript">
+            $.fn.partial = ($,function partial(source){
+                $.get(source,function(data){
+                    if(!data){
+                        return false;
+                    }
+                    else{
+                        $(document.body).append(data);
+                    }
+                });
+            });
+
+            $(document).partial("views/_navbar.html");
+            $(document).partial("views/_carosel.html");
+            $(document).partial("views/_marketing.html");
+            $(document).partial("views/_featurette.html");
+            $(document).partial("views/_footer.html");
+        </script>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -45,10 +60,6 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <!-- build:js scripts/main.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbuild -->
-
         <!-- build:js scripts/vendor/galleria.js -->
         <script src="bower_components/jquery-galleria/src/galleria.js"></script>
         <script src="bower_components/jquery-galleria/src/plugins/picasa/galleria.picasa.js"></script>
@@ -59,12 +70,12 @@
         <script>
             //Galleria.loadTheme('scripts/vendor/theme/galleria.classic.min.js');
             Galleria.loadTheme('bower_components/jquery-galleria/src/themes/classic/galleria.classic.js');
-            Galleria.run('#galleria', {
+/*            Galleria.run('#galleria', {
                 picasa: 'useralbum:116822487665710086731/5215542302391162465',
                 picasaOptions: {
                     sort: 'date-posted-asc'
                 }
-            });
+            });*/
         </script>
         <!-- endbuild -->
 
@@ -82,6 +93,18 @@
         <script src="bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
         <script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
         <script src="bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/holder.js -->
+        <script>
+          !function ($) {
+            $(function(){
+              // carousel demo
+              $('#myCarousel').carousel()
+            })
+          }(window.jQuery)
+        </script>
+        <script src="bower_components/holderjs/holder.js"></script>
         <!-- endbuild -->
 
 </body>
