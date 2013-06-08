@@ -9,4 +9,4 @@ The application was built using yeoman's webapp generator. Install the source co
 npm install
 bower install jquery modernizr sass-bootstrap jquery-galleria
 ```
-You can build the app using `grunt`.
+You can build the app using `grunt`. Note: you will have to use my version of the Picasa plugin in order for useralbum config to work properly.
