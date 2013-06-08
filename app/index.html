@@ -18,14 +18,14 @@
 
         <!-- style the gallery -->
         <style type="text/css">
-            #galleria{ width: 700px; height: 400px; }
+            .galleria{ width: 512px; height: 512px; margin: 0 10px 0 10px; }
             .galleria-container{}
         </style>
 
     </head>
     <body>
 
-        <!-- build:js scripts/main.js -->
+        <!-- build:js scripts/jquery.js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <!-- endbuild -->
 
@@ -70,12 +70,24 @@
         <script>
             //Galleria.loadTheme('scripts/vendor/theme/galleria.classic.min.js');
             Galleria.loadTheme('bower_components/jquery-galleria/src/themes/classic/galleria.classic.js');
-/*            Galleria.run('#galleria', {
+            Galleria.run('#galleria_wedding', {
                 picasa: 'useralbum:116822487665710086731/5215542302391162465',
                 picasaOptions: {
                     sort: 'date-posted-asc'
                 }
-            });*/
+            });
+            Galleria.run('#galleria_sports', {
+                picasa: 'useralbum:116822487665710086731/5215542302391162465',
+                picasaOptions: {
+                    sort: 'date-posted-asc'
+                }
+            });
+            Galleria.run('#galleria_children', {
+                picasa: 'useralbum:116822487665710086731/5215542302391162465',
+                picasaOptions: {
+                    sort: 'date-posted-asc'
+                }
+            });
         </script>
         <!-- endbuild -->
 
@@ -93,9 +105,7 @@
         <script src="bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
         <script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
         <script src="bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
-        <!-- endbuild -->
 
-        <!-- build:js scripts/holder.js -->
         <script>
           !function ($) {
             $(function(){
@@ -104,7 +114,6 @@
             })
           }(window.jQuery)
         </script>
-        <script src="bower_components/holderjs/holder.js"></script>
         <!-- endbuild -->
 
 </body>
