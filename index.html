@@ -59,8 +59,39 @@
         <script src="scripts/vendor/3e618e5a.galleria.js"></script>
 
         <script src="scripts/vendor/theme/galleria.classic.min.js"></script>
+        <script>
+            Galleria.loadTheme('scripts/vendor/theme/galleria.classic.min.js');
+            //Galleria.loadTheme('bower_components/jquery-galleria/src/themes/classic/galleria.classic.js');
+            Galleria.run('#galleria_wedding', {
+                picasa: 'useralbum:116822487665710086731/5215542302391162465',
+                picasaOptions: {
+                    sort: 'date-posted-asc'
+                }
+            });
+            Galleria.run('#galleria_sports', {
+                picasa: 'useralbum:116822487665710086731/5215542302391162465',
+                picasaOptions: {
+                    sort: 'date-posted-asc'
+                }
+            });
+            Galleria.run('#galleria_children', {
+                picasa: 'useralbum:116822487665710086731/5215542302391162465',
+                picasaOptions: {
+                    sort: 'date-posted-asc'
+                }
+            });
+        </script>
 
         <script src="scripts/76c21dca.plugins.js"></script>
+
+        <script>
+          !function ($) {
+            $(function(){
+              // carousel demo
+              $('#myCarousel').carousel()
+            })
+          }(window.jQuery)
+        </script>
 
 </body>
 </html>
